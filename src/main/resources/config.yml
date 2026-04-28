@@ -1,0 +1,106 @@
+webhook-logs:
+  server-start:
+    Enable: true
+    webhook-url: ""
+    title: "✅ Server Started"
+    color: 5763719 # Green
+    fields:
+      - { name: "🟢 Status", value: "The server is now online and ready to play!", inline: false }
+
+  server-stop:
+    Enable: true
+    webhook-url: ""
+    title: "🛑 Server Stopped"
+    color: 15548997 # Red
+    fields:
+      - { name: "🔴 Status", value: "The server is shutting down or restarting.", inline: false }
+
+  join:
+    Enable: true
+    webhook-url: ""
+    title: "📥 Player Joined"
+    color: 5763719 # Green
+    fields:
+      - { name: "👤 Player", value: "{player}", inline: true }
+      - { name: "👥 Online", value: "{online}/{max}", inline: true }
+
+  quit:
+    Enable: true
+    webhook-url: ""
+    title: "📤 Player Left"
+    color: 15548997 # Red
+    fields:
+      - { name: "👤 Player", value: "{player}", inline: true }
+      - { name: "👥 Online", value: "{online}/{max}", inline: true }
+
+  death:
+    Enable: true
+    webhook-url: ""
+    title: "💀 Player Death"
+    color: 16753920
+    fields:
+      - { name: "👤 Victim", value: "{victim}", inline: true }
+      - { name: "🗡️ Killer", value: "{killer}", inline: true }
+      - { name: "🩸 Cause", value: "{cause}", inline: true }
+      - { name: "📍 Location", value: "`{location}`", inline: false }
+
+  Kills:
+    Enable: true
+    webhook-url: ""
+    title: "💀 Kill Detected"
+    color: 10038562
+    fields:
+      - { name: "👤 Victim", value: "{victim}", inline: true }
+      - { name: "🗡️ Killer", value: "{killer}", inline: true }
+      - { name: "🩸 Cause", value: "{cause}", inline: true }
+      - { name: "📍 Location", value: "`{location}`", inline: false }
+
+  commands:
+    Enable: true
+    webhook-url: ""
+    title: "⌨️ Command Executed"
+    color: 3447003
+    fields:
+      - { name: "👤 Player", value: "{player}", inline: true }
+      - { name: "📌 Command", value: "`{command}`", inline: false }
+
+  economy:
+    Enable: true
+    webhook-url: ""
+    title: "💸 Money Transfer"
+    color: 3066993 # Emerald Green
+    fields:
+      - { name: "📤 Sender", value: "{sender}", inline: true }
+      - { name: "📥 Receiver", value: "{receiver}", inline: true }
+      - { name: "💰 Amount", value: "**${amount}**", inline: true }
+
+  shop-buy:
+    Enable: true
+    webhook-url: ""
+    title: "🛒 Shop Purchase"
+    color: 3447003 # Blue
+    fields:
+      - { name: "👤 Player", value: "{player}", inline: true }
+      - { name: "📦 Item", value: "`{item}`", inline: true }
+      - { name: "🔢 Quantity", value: "{amount}", inline: true }
+      - { name: "💸 Price Paid", value: "**${price}**", inline: false }
+
+  shop-sell:
+    Enable: true
+    webhook-url: ""
+    title: "💰 Shop Sale"
+    color: 15105570 # Orange
+    fields:
+      - { name: "👤 Player", value: "{player}", inline: true }
+      - { name: "📦 Item", value: "`{item}`", inline: true }
+      - { name: "🔢 Quantity", value: "{amount}", inline: true }
+      - { name: "💵 Money Received", value: "**${price}**", inline: false }
+
+  security:
+    Enable: true
+    webhook-url: ""
+    title: "⚠️ Dangerous Command"
+    color: 16711680 # Bright Red
+    fields:
+      - { name: "👤 User", value: "{player}", inline: true }
+      - { name: "📌 Command", value: "`{command}`", inline: true }

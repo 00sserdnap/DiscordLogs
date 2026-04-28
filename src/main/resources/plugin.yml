@@ -1,0 +1,5 @@
+name: DiscordLogs
+version: 1.0
+main: cl.pandress.DiscordLogsPlugin
+api-version: '1.21'
+softdepend: [ShopGUIPlus]
